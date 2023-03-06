@@ -2,6 +2,7 @@ import re
 from os import environ
 from Script import script
 from pyrogram import Client
+from collections import defaultdict
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
