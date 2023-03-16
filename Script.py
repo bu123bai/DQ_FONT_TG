@@ -206,14 +206,15 @@ Nᴀᴍᴇ - {}"""
 <b>📂 Fɪʟᴇ ɴᴀᴍᴇ : </b> <code>{file_name}</code>
 
 <b>
-╭─────── • ◆ • ───────╮
-🔅 𝐓𝐄𝐀𝐌 𝐒𝐍𝐒 🇮🇳 : <a href="https://t.me/ABOUT_SNS">Tᴏᴜᴄʜ</a>
-╰─────── • ◆ • ───────╯
+╭── • ◆ • ──╮
+ 🇮🇳 𝐓𝐄𝐀𝐌 𝐒𝐍𝐒 : <a href="https://t.me/ABOUT_SNS">Tᴏᴜᴄʜ</a>
+╰── • ◆ • ──╯
 
-=========== • ✠ • ===========
-▫️ ᴄʜᴀɴɴᴇʟ : @MOVIESNSERIESSNS
-▫️ 𝙱𝙰𝙲𝙺𝚄𝙿 𝙶𝚁𝙾𝚄𝙿 : @MoviesNSeriesGroupSNS
-=========== • ✠ • ===========</b>"""
+======= • ✠ • =======
+▫️ 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 : @SNSxTG
+▫️ 𝙼𝙰𝙸𝙽 𝙶𝚁𝙾𝚄𝙿 : 
+   @Movies_Group_SNS
+======= • ✠ • =======</b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
