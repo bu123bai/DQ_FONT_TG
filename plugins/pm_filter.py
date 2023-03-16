@@ -141,7 +141,7 @@ async def next_page(bot, query):
             btn = [
                 [
                     InlineKeyboardButton(
-                        text=f"💙 [{get_size(file.file_size)}] 🔶 {file.file_name}", url=await get_shortlink(query.message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
+                        text=f"🦞 [{get_size(file.file_size)}] 🔶 {file.file_name}", url=await get_shortlink(query.message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                     ),
                 ]
                 for file in files
@@ -153,7 +153,7 @@ async def next_page(bot, query):
                         text=f"🔶 {file.file_name}", url=await get_shortlink(query.message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                     ),
                     InlineKeyboardButton(
-                        text=f"💙 {get_size(file.file_size)}",
+                        text=f"🦞 {get_size(file.file_size)}",
                         url=await get_shortlink(query.message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                     ),
                 ]
@@ -164,7 +164,7 @@ async def next_page(bot, query):
             btn = [
                 [
                     InlineKeyboardButton(
-                        text=f"💙 [{get_size(file.file_size)}] 🔶 {file.file_name}", callback_data=f'files#{file.file_id}'
+                        text=f"🦞 [{get_size(file.file_size)}] 🔶 {file.file_name}", callback_data=f'files#{file.file_id}'
                     ),
                 ]
                 for file in files
@@ -176,7 +176,7 @@ async def next_page(bot, query):
                         text=f"🔶 {file.file_name}", callback_data=f'files#{file.file_id}'
                     ),
                     InlineKeyboardButton(
-                        text=f"💙 {get_size(file.file_size)}",
+                        text=f"🦞 {get_size(file.file_size)}",
                         callback_data=f'files_#{file.file_id}',
                     ),
                 ]
@@ -957,11 +957,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                     InlineKeyboardButton('💠 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 💠', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('🇮🇳 Oᴡɴᴇʀ 🇮🇳', callback_data="owner_info"),
-                    InlineKeyboardButton('🔰 Oᴜʀ Gʀᴏᴜᴘꜱ 🔰', callback_data='group')
+                    InlineKeyboardButton('🇮🇳 Oᴡɴᴇʀ', callback_data="owner_info"),
+                    InlineKeyboardButton('🔰 Oᴜʀ Gʀᴏᴜᴘꜱ', callback_data='group')
                 ],[
-                    InlineKeyboardButton('❇️ Hᴇʟᴘ ❇️', callback_data='help'),
-                    InlineKeyboardButton('✪ Aʙᴏᴜᴛ ✪', callback_data='about')
+                    InlineKeyboardButton('❇️ Hᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('✪ Aʙᴏᴜᴛ', callback_data='about')
                 ],[
                     InlineKeyboardButton('🎆 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🎆', url=CHNL_LNK)
                   ]]
@@ -1420,7 +1420,7 @@ async def auto_filter(client, msg, spoll=False):
             btn = [
                 [
                     InlineKeyboardButton(
-                        text=f"💙 [{get_size(file.file_size)}]🔶 {file.file_name}", url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
+                        text=f"🦞 [{get_size(file.file_size)}]🔶 {file.file_name}", url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                     ),
                 ]
                 for file in files
@@ -1433,7 +1433,7 @@ async def auto_filter(client, msg, spoll=False):
                         url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                     ),
                     InlineKeyboardButton(
-                        text=f"💙 {get_size(file.file_size)}",
+                        text=f"🦞 {get_size(file.file_size)}",
                         url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                     ),
                 ]
@@ -1444,7 +1444,7 @@ async def auto_filter(client, msg, spoll=False):
             btn = [
                 [
                     InlineKeyboardButton(
-                        text=f"💙 [{get_size(file.file_size)}] 🔶 {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                        text=f"🦞 [{get_size(file.file_size)}] 🔶 {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                     ),
                 ]
                 for file in files
@@ -1457,7 +1457,7 @@ async def auto_filter(client, msg, spoll=False):
                         callback_data=f'{pre}#{file.file_id}',
                     ),
                     InlineKeyboardButton(
-                        text=f"💙 {get_size(file.file_size)}",
+                        text=f"🦞 {get_size(file.file_size)}",
                         callback_data=f'{pre}#{file.file_id}',
                     ),
                 ]
