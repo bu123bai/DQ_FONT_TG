@@ -309,6 +309,11 @@ async def next_page(bot, query):
                         InlineKeyboardButton("𝐍𝐄𝐗𝐓 ➪", callback_data=f"next_{req}_{key}_{n_offset}")
                     ],
                 )
+
+    btn.append(
+            [InlineKeyboardButton(text="⁉️ 𝗛𝗼𝘄 𝗧𝗼 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 ⁉️",url="t.me/THE_SNS")]
+    )
+
     btn.insert(0, [
         InlineKeyboardButton(f' 🎇 {search} 🎇 ', 'snsinfo')
     ])
