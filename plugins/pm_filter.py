@@ -310,7 +310,7 @@ async def next_page(bot, query):
                     ],
                 )
     btn.insert(0, [
-        InlineKeyboardButton("🌇 Cʜᴇᴄᴋ Bᴏᴛ PM 🌇", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton(f' 🎇 {search} 🎇 ', 'snsinfo')
     ])
     try:
         await query.edit_message_reply_markup(
@@ -953,6 +953,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "sinfo":
         await query.answer(text=script.SINFO, show_alert=True)
 
+    elif query.data == "snsinfo":
+        await query.answer(text=script.SNSINFO, show_alert=True)
+
     elif query.data == "start":
         buttons = [[
                     InlineKeyboardButton('💠 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 💠', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -1504,7 +1507,7 @@ async def auto_filter(client, msg, spoll=False):
             )
 
     btn.insert(0, [
-        InlineKeyboardButton("🌇 Cʜᴇᴄᴋ Bᴏᴛ PM 🌇", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton(f' 🎇 {search} 🎇 ', 'snsinfo')
     ])
 
     if offset != "":
