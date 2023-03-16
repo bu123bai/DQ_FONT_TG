@@ -186,17 +186,17 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
             )
                 
@@ -207,17 +207,17 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
             )
     try:
@@ -1476,17 +1476,17 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
             )
                 
@@ -1497,17 +1497,17 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
             )
 
@@ -1542,7 +1542,7 @@ async def auto_filter(client, msg, spoll=False):
                 )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🔒 𝗡𝗼 𝗠𝗼𝗿𝗲 𝗣𝗮𝗴𝗲𝘀 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 🔒",callback_data="pages")]
+            [InlineKeyboardButton(text="🧨 𝗡𝗼 𝗠𝗼𝗿𝗲 𝗣𝗮𝗴𝗲𝘀 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 🧨",callback_data="pages")]
         )
 
     btn.append(
