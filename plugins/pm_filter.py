@@ -143,17 +143,17 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'✳️ 𝚁𝙴𝙰𝙳', 'tips'),
+                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo')
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'✳️ 𝚁𝙴𝙰𝙳', 'tips')
                 ]
             )
                 
@@ -164,17 +164,17 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'✳️ 𝚁𝙴𝙰𝙳', 'tips'),
+                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo')
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'✳️ 𝚁𝙴𝙰𝙳', 'tips')
                 ]
             )
     try:
@@ -338,13 +338,13 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
         0,
         [
             InlineKeyboardButton(
-                text="👇 𝖲𝖾𝗅𝖾𝖼𝗍 𝖸𝗈𝗎𝗋 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾𝗌 👇", callback_data="ident"
+                text="🔰 Sᴇʟᴇᴄᴛ Yᴏᴜʀ Dᴇꜱɪʀᴇᴅ Lᴀɴɢᴜᴀɢᴇ 🔰", callback_data="ident"
             )
         ],
     )
     req = query.from_user.id
     offset = 0
-    btn.append([InlineKeyboardButton(text="↭ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↭", callback_data=f"next_{req}_{key}_{offset}")])
+    btn.append([InlineKeyboardButton(text="↺ Rᴇᴛᴜʀɴ Tᴏ Mᴀɪɴ Pᴀɢᴇ ↻", callback_data=f"next_{req}_{key}_{offset}")])
 
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
 
@@ -368,7 +368,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     files, _, _ = await get_search_results(chat_id, search, max_results=10)
     files = [file for file in files if re.search(lang, file.file_name, re.IGNORECASE)]
     if not files:
-        await query.answer("🚫 𝗡𝗼 𝗙𝗶𝗹𝗲 𝗪𝗲𝗿𝗲 𝗙𝗼𝘂𝗻𝗱 🚫", show_alert=1)
+        await query.answer("𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗙𝗶𝗻𝗱 𝗔𝗻𝘆 𝗙𝗶𝗹𝗲𝘀 😔 𝗦𝗲𝗹𝗲𝗰𝘁 𝗔𝗻𝘆 𝗢𝘁𝗵𝗲𝗿 𝗟𝗮𝗻𝗴𝘂𝗮𝗴𝗲 👍", show_alert=1)
         return
 
     settings = await get_settings(message.chat.id)
@@ -383,7 +383,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        text=f"▫️ {get_size(file.file_size)} ⊳ {file.file_name}",
+                        text=f"🦞 {get_size(file.file_size)} 🦋 {file.file_name}",
                         url=await get_shortlink(
                             message.chat.id,
                             f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}",
@@ -396,14 +396,14 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             else [
                 [
                     InlineKeyboardButton(
-                        text=f"{file.file_name}",
+                        text=f"🦋 {file.file_name}",
                         url=await get_shortlink(
                             message.chat.id,
                             f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}",
                         ),
                     ),
                     InlineKeyboardButton(
-                        text=f"{get_size(file.file_size)}",
+                        text=f"🦞 {get_size(file.file_size)}",
                         url=await get_shortlink(
                             message.chat.id,
                             f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}",
@@ -417,7 +417,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"▫️ {get_size(file.file_size)} ⊳ {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"🦞 {get_size(file.file_size)} 🦋 {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -426,11 +426,11 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{file.file_name}",
+                    text=f"🦋 {file.file_name}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
+                    text=f"🦞 {get_size(file.file_size)}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
             ]
@@ -441,9 +441,9 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             btn.insert(
                 0,
                 [
-                    InlineKeyboardButton(f'♻️ ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'sinfo'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'minfo')
+                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ],
             )
 
@@ -451,9 +451,8 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             btn.insert(
                 0,
                 [
-                    InlineKeyboardButton(f'♻️ ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'sinfo'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'minfo')
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ],
             )
 
@@ -465,9 +464,9 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             btn.insert(
                 0,
                 [
-                    InlineKeyboardButton(f'♻️ ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'sinfo'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'minfo')
+                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ],
             )
 
@@ -475,9 +474,8 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             btn.insert(
                 0,
                 [
-                    InlineKeyboardButton(f'♻️ ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'sinfo'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'minfo')
+                    InlineKeyboardButton(f'🎥 ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'📺 ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ],
             )
 
@@ -488,7 +486,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
 
     btn.append(        [
             InlineKeyboardButton(
-                text="↭ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↭",
+                text="↺ Rᴇᴛᴜʀɴ Tᴏ Mᴀɪɴ Pᴀɢᴇ ↻",
                 callback_data=f"next_{req}_{key}_{offset}"
                 ),
         ])
@@ -1099,7 +1097,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(text=script.REQINFO, show_alert=True)
 
     elif query.data == "tips":
-        await query.answer(text=script.REQINFO, show_alert=True)
+        await query.answer(text=script.TIPS, show_alert=True)
 
     elif query.data == "minfo":
         await query.answer(text=script.MINFO, show_alert=True)
@@ -1627,17 +1625,17 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'✳️ 𝚁𝙴𝙰𝙳', 'tips'),
+                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo')
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'✳️ 𝚁𝙴𝙰𝙳', 'tips')
                 ]
             )
                 
@@ -1648,17 +1646,17 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'✳️ 𝚁𝙴𝙰𝙳', 'tips'),
+                    InlineKeyboardButton(f'🗒 ɪɴꜰᴏ', 'reqinfo')
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'✳️ 𝚁𝙴𝙰𝙳', 'tips')
                 ]
             )
 
