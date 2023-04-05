@@ -359,7 +359,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     message = query.message
     if int(req) not in [query.message.reply_to_message.from_user.id, 0]:
         return await query.answer(
-            f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ...",
+            f"⚠️ Hᴇʏ {query.from_user.first_name},\nPʟᴇᴀꜱᴇ Dᴏɴ'ᴛ Tᴏᴜᴄʜ Oɴ Oᴛʜᴇʀꜱ Rᴇǫᴜᴇꜱᴛ. \nRᴇǫᴜᴇꜱᴛ Yᴏᴜʀꜱᴇʟғ.",
             show_alert=True,
         )
 
@@ -368,7 +368,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     files, _, _ = await get_search_results(chat_id, search, max_results=10)
     files = [file for file in files if re.search(lang, file.file_name, re.IGNORECASE)]
     if not files:
-        await query.answer("𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗙𝗶𝗻𝗱 𝗔𝗻𝘆 𝗙𝗶𝗹𝗲𝘀 😔 𝗦𝗲𝗹𝗲𝗰𝘁 𝗔𝗻𝘆 𝗢𝘁𝗵𝗲𝗿 𝗟𝗮𝗻𝗴𝘂𝗮𝗴𝗲 👍", show_alert=1)
+        await query.answer(f"𝗛𝗲𝘆 {query.from_user.first_name} ! \n𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗙𝗶𝗻𝗱 𝗔𝗻𝘆 𝗙𝗶𝗹𝗲𝘀 😔 \n𝗦𝗲𝗹𝗲𝗰𝘁 𝗔𝗻𝘆 𝗢𝘁𝗵𝗲𝗿 𝗟𝗮𝗻𝗴𝘂𝗮𝗴𝗲 👍", show_alert=1)
         return
 
     settings = await get_settings(message.chat.id)
