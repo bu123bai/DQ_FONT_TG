@@ -71,6 +71,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Rajappan")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
+LANGUAGES = ["malayalam", "tamil", "english", "hindi", "telugu", "kannada"]
 VERIFY = bool(environ.get('VERIFY', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'mdisklink.link')
 SHORTLINK_API = environ.get('SHORTLINK_API', '0170eef799e9042e505929afe1d40796cb054892')
