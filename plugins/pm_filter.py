@@ -11,7 +11,7 @@ import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from info import ADMINS, LANGUAGES, AUTH_CHANNEL, AUTH_USERS, SUPPORT_CHAT_ID, CUSTOM_FILE_CAPTION, MSG_ALRT, PICS, AUTH_GROUPS, P_TTI_SHOW_OFF, GRP_LNK, CHNL_LNK, NOR_IMG, LOG_CHANNEL, SPELL_IMG, MAX_B_TN, IMDB, \
-    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, NO_RESULTS_MSG
+    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, NO_RESULTS_MSG, IS_VERIFY
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -795,6 +795,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         await query.answer()
+        if IS_VERIFY and not await check_verification(client, query.from_user.id):
+            btn = [[
+                    InlineKeyboardButton("💠 𝗖𝗹𝗶𝗰𝗸 𝗧𝗼 𝗩𝗲𝗿𝗶𝗳𝘆 💠", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+                ],[
+                    InlineKeyboardButton("🐙 𝗛𝗼𝘄 𝗧𝗼 𝗩𝗲𝗿𝗶𝗳𝘆 🐙", url="https://t.me/THE_SNS/11")
+                ]]
+            await client.send_message(
+                chat_id=query.from_user.id,
+                text="<b>Hey, You are not verified !\nKindly verify yourself to get unlimited access !</b>",
+                protect_content=True if ident == 'checksubp' else False,
+                disable_web_page_preview=True,
+                parse_mode=enums.ParseMode.HTML,
+                reply_markup=InlineKeyboardMarkup(btn)
+            )
+            return
         await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
