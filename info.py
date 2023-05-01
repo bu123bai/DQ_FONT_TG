@@ -72,7 +72,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 LANGUAGES = ["malayalam", "tamil", "english", "hindi", "telugu", "kannada"]
-VERIFY = bool(environ.get('VERIFY', False))
+IS_VERIFY = bool(environ.get('IS_VERIFY', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'mdisklink.link')
 SHORTLINK_API = environ.get('SHORTLINK_API', '0170eef799e9042e505929afe1d40796cb054892')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
