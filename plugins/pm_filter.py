@@ -797,7 +797,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
         if IS_VERIFY and not await check_verification(client, query.from_user.id):
             btn = [[
-                    InlineKeyboardButton("💠 𝗖𝗹𝗶𝗰𝗸 𝗧𝗼 𝗩𝗲𝗿𝗶𝗳𝘆 💠", url=await get_token(client, query.from_user.id, f"https://telegram.me/{temp.U_NAME}?star="))
+                    InlineKeyboardButton("💠 𝗖𝗹𝗶𝗰𝗸 𝗧𝗼 𝗩𝗲𝗿𝗶𝗳𝘆 💠", url=await get_token(client, query.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
                 ],[
                     InlineKeyboardButton("🐙 𝗛𝗼𝘄 𝗧𝗼 𝗩𝗲𝗿𝗶𝗳𝘆 🐙", url="https://t.me/THE_SNS/11")
                 ]]
