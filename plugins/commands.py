@@ -147,10 +147,9 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                          InlineKeyboardButton("🎥 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🎥", url=GRP_LNK)
                        ],[
-                          InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/TEAM_SNS_BOT")
+                          InlineKeyboardButton("⚡ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⚡", url=CHNL_LNK)
                          ]
                         ]
                     )
@@ -166,10 +165,9 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                          InlineKeyboardButton("🎥 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🎥", url=GRP_LNK)
                        ],[
-                          InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/TEAM_SNS_BOT")
+                          InlineKeyboardButton("⚡ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⚡", url=CHNL_LNK)
                          ]
                         ]
                     )
@@ -267,16 +265,15 @@ async def start(client, message):
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup(
-                    [
-                     [
-                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                   ],[
-                      InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/TEAM_SNS_BOT")
-                     ]
-                    ]
+                        [
+                         [
+                          InlineKeyboardButton("🎥 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🎥", url=GRP_LNK)
+                       ],[
+                          InlineKeyboardButton("⚡ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⚡", url=CHNL_LNK)
+                         ]
+                        ]
+                    )
                 )
-            )
             filetype = msg.media
             file = getattr(msg, filetype.value)
             title = file.file_name
@@ -322,16 +319,15 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         reply_markup=InlineKeyboardMarkup(
-            [
-             [
-              InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-              InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-           ],[
-              InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/TEAM_SNS_BOT")
-             ]
-            ]
-        )
-    )
+                        [
+                         [
+                          InlineKeyboardButton("🎥 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🎥", url=GRP_LNK)
+                       ],[
+                          InlineKeyboardButton("⚡ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⚡", url=CHNL_LNK)
+                         ]
+                        ]
+                    )
+                )
                     
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
