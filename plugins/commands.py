@@ -147,7 +147,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton("🎥 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🎥", url=GRP_LNK)
+                          InlineKeyboardButton("🔷 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🔷", url=GRP_LNK)
                        ],[
                           InlineKeyboardButton("⚡ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⚡", url=CHNL_LNK)
                          ]
@@ -165,7 +165,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton("🎥 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🎥", url=GRP_LNK)
+                          InlineKeyboardButton("🔷 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🔷", url=GRP_LNK)
                        ],[
                           InlineKeyboardButton("⚡ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⚡", url=CHNL_LNK)
                          ]
@@ -267,7 +267,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton("🎥 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🎥", url=GRP_LNK)
+                          InlineKeyboardButton("🔷 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🔷", url=GRP_LNK)
                        ],[
                           InlineKeyboardButton("⚡ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⚡", url=CHNL_LNK)
                          ]
@@ -321,7 +321,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton("🎥 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🎥", url=GRP_LNK)
+                          InlineKeyboardButton("🔷 Mᴏᴠɪᴇꜱ Gʀᴏᴜᴘ 🔷", url=GRP_LNK)
                        ],[
                           InlineKeyboardButton("⚡ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⚡", url=CHNL_LNK)
                          ]
