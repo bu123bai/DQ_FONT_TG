@@ -249,11 +249,11 @@ async def start(client, message):
 
     files_ = await get_file_details(file_id)           
     if not files_:
-        pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
+        pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 5)
         try:
             if IS_VERIFY and not await check_verification(client, message.from_user.id):
                 btn = [[
-                    InlineKeyboardButton("💠 𝗖𝗹𝗶𝗰𝗸 𝗧𝗼 𝗩𝗲𝗿𝗶𝗳𝘆 💠", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+                    InlineKeyboardButton("💠 𝗖𝗹𝗶𝗰𝗸 𝗧𝗼 𝗩𝗲𝗿𝗶𝗳𝘆 💠", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
                 ],[
                     InlineKeyboardButton("🐙 𝗛𝗼𝘄 𝗧𝗼 𝗩𝗲𝗿𝗶𝗳𝘆 🐙", url="https://t.me/THE_SNS/11")
                 ]]
@@ -307,7 +307,7 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
     if IS_VERIFY and not await check_verification(client, message.from_user.id):
         btn = [[
-            InlineKeyboardButton("💠 𝗖𝗹𝗶𝗰𝗸 𝗧𝗼 𝗩𝗲𝗿𝗶𝗳𝘆 💠", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+            InlineKeyboardButton("💠 𝗖𝗹𝗶𝗰𝗸 𝗧𝗼 𝗩𝗲𝗿𝗶𝗳𝘆 💠", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
         ],[
             InlineKeyboardButton("🐙 𝗛𝗼𝘄 𝗧𝗼 𝗩𝗲𝗿𝗶𝗳𝘆 🐙", url="https://t.me/THE_SNS/11")
         ]]
