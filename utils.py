@@ -589,3 +589,12 @@ async def check_verification(bot, userid):
             return True
     else:
         return False
+
+async def take_shortlink(group_id, link):
+    settings = await get_settings(group_id)
+    url = settings['url']
+    api = settings['api']
+    shortzy = Shortzy(api_key=api, base_site=url)
+
+    link = await shortzy.convert(link)
+    return link
