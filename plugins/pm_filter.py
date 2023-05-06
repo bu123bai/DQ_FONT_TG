@@ -1849,9 +1849,9 @@ async def advantage_spell_chok(msg):
     if not g_s:
         search = mv_rqst.replace(" ", "+")
         btn = [[
-            InlineKeyboardButton('𝙶𝙾𝙾𝙶𝙻𝙴 🔎', url=f'https://google.com/search?q={search}')
+            InlineKeyboardButton('Sᴇᴀʀᴄʜ Oɴ Gᴏᴏɢʟᴇ 🔎', url=f'https://google.com/search?q={search}')
         ],[
-            InlineKeyboardButton('𝙱𝙸𝙽𝙶 🔎', url=f'https://bing.com/search?q={search}')
+            InlineKeyboardButton('Sᴇᴀʀᴄʜ Oɴ Bɪɴɢ 🔎', url=f'https://bing.com/search?q={search}')
         ]]        
         k=await msg.reply_photo(photo="https://telegra.ph/file/5d54fb9ba5b6eb42e1fbf.jpg", caption=script.SPELL_CHECK_ENG_TXT, reply_markup=InlineKeyboardMarkup(btn))    
         await asyncio.sleep(180)
@@ -1885,9 +1885,9 @@ async def advantage_spell_chok(msg):
     if not movielist:
         search = mv_rqst.replace(" ", "+")
         btn = [[
-            InlineKeyboardButton('𝙶𝙾𝙾𝙶𝙻𝙴 🔎', url=f'https://google.com/search?q={search}')
+            InlineKeyboardButton('Sᴇᴀʀᴄʜ Oɴ Gᴏᴏɢʟᴇ 🔎', url=f'https://google.com/search?q={search}')
         ],[
-            InlineKeyboardButton('𝙱𝙸𝙽𝙶 🔎', url=f'https://bing.com/search?q={search}')
+            InlineKeyboardButton('Sᴇᴀʀᴄʜ Oɴ Bɪɴɢ 🔎', url=f'https://bing.com/search?q={search}')
         ]]           
         k=await msg.reply_photo(photo="https://telegra.ph/file/5d54fb9ba5b6eb42e1fbf.jpg", caption=script.SPELL_CHECK_ENG_TXT, reply_markup=InlineKeyboardMarkup(btn))    
         await asyncio.sleep(180)
@@ -1897,9 +1897,9 @@ async def advantage_spell_chok(msg):
     SPELL_CHECK[msg.id] = movielist
     search = mv_rqst.replace(" ", "+")
     btn = [[
-        InlineKeyboardButton('𝙶𝙾𝙾𝙶𝙻𝙴 🔎', url=f'https://google.com/search?q={search}')
+        InlineKeyboardButton('Sᴇᴀʀᴄʜ Oɴ Gᴏᴏɢʟᴇ 🔎', url=f'https://google.com/search?q={search}')
     ],[
-        InlineKeyboardButton('𝙱𝙸𝙽𝙶 🔎', url=f'https://bing.com/search?q={search}')
+        InlineKeyboardButton('Sᴇᴀʀᴄʜ Oɴ Bɪɴɢ 🔎', url=f'https://bing.com/search?q={search}')
     ]]
     k=await msg.reply_photo(photo="https://telegra.ph/file/5d54fb9ba5b6eb42e1fbf.jpg", caption=script.SPELL_CHECK_ENG_TXT, reply_markup=InlineKeyboardMarkup(btn))    
     await asyncio.sleep(180)
