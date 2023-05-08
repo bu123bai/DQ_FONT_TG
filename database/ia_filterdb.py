@@ -67,7 +67,6 @@ async def save_file(media):
 
 
 
-
 async def get_search_results(chat_id, query, file_type=None, max_results=10, offset=0, filter=False):
     """For given query return (results, next_offset)"""
     if chat_id is not None:
