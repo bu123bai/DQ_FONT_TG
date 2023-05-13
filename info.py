@@ -73,8 +73,8 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # Others
 LANGUAGES = ["malayalam", "tamil", "english", "hindi", "telugu", "kannada"]
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'mdisklink.link')
-SHORTLINK_API = environ.get('SHORTLINK_API', '0170eef799e9042e505929afe1d40796cb054892')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.shareus.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'tO7so9w4CydmSngMFVB4ynX8j6k2')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
